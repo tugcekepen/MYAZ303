@@ -1,0 +1,31 @@
+﻿@model List<Category>
+
+<div>
+    <div class="row">
+        @foreach (var cat in @Model)
+        {
+            <div class="col">
+                <div class="text">
+                    <h6>@cat.CategoryName</h6>
+                    <p>@cat.Description</p>
+                </div>
+            </div>
+            
+            <div>
+                <a class="btn btn-light" asp-action="Update" asp-controller="Category" asp-route-id="@cat.Id">Update</a>
+            </div>
+            <div>
+                <form method="post" asp-action="Delete" asp-controller="Category" asp-route-id="@cat.Id">
+                    <button type="submit" class="btn btn-light">Delete</button>
+                </form>
+            </div>
+
+            <br />
+            <br />
+            <br />
+        }
+    </div>
+</div>
+<div>
+    <a asp-action="Create" asp-controller="Category" class="btn btn-light">Create Category</a>
+</div>

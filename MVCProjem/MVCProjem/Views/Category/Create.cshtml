@@ -1,0 +1,13 @@
+﻿@model Category
+
+<form method="post" asp-action="Create" asp-controller="Category">
+
+    <div class="text-danger" asp-validation-summary="All"></div> @*Errors*@
+
+    <div class="form-group my-2">
+        <input type="text" class="form-control my-2" asp-for="CategoryName" placeholder="Enter category name" />
+        <input type="text" class="form-control my-2" asp-for="Description" placeholder="Enter description" />
+        <button type="submit" class="btn btn-light">Create Category</button>
+    </div>
+
+</form>

@@ -1,0 +1,19 @@
+﻿@model Category
+
+<form method="post" asp-action="Update" asp-controller="Category">
+
+    <input asp-for="Id" type="hidden" />
+
+    <div class="form-grup">
+        <div>
+            <input type="text" asp-for="CategoryName" id="CategoryName" class="form-control my-1" placeholder="Category Name" />
+            <span class="text-danger" asp-validation-for="CategoryName"></span>
+        </div>
+        <div>
+            <input type="text" asp-for="Description" id="Description" class="form-control my-1" placeholder="Description" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-light">Update Category</button>
+
+</form>
